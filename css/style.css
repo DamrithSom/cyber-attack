@@ -1,11 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
 :root {
+  --box-shadow: 0 0 5px hwb(0 54% 46%);
 }
 html {
   font-family: "Poppins", sans-serif;
 }
 body {
   font-size: 62.5%;
+  background-color: #b9b9b9;
 }
 * {
   margin: 0;
@@ -15,11 +18,13 @@ body {
 /* width-contenner */
 .width-contenner {
   max-width: 1024px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .top-page {
-  background-color: gray;
+  position: sticky;
+  top: 0;
+  background-color: rgb(107, 102, 102);
   padding: 0.5rem;
 }
 .icon {
@@ -68,26 +73,69 @@ li {
 
 } */
 .hero-sections {
-  margin: 20px 0;
+  background-color: #888888;
 }
 .grid-1x2 {
+  /* margin: 1rem; */
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.grid-1x3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+@media screen and (max-width: 900px) {
+  .grid-1x3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 768px) {
+  .grid-1x2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+  }
+  .grid-letf {
+    margin: 0 1rem;
+  }
+  .grid-1x3 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+  }
 }
 .grid-letf h1 {
-  position: relative;
+  color: white;
+
   font-size: 2rem;
-  margin-bottom: 10px;
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
 }
 .grid-letf p {
-  position: relative;
-  font-size: 1rem;
-  margin-bottom: 25px;
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: white;
 }
-.btn {
-  padding: 0.5rem 1.5rem;
+.btn-primary {
+  padding: 0.5rem 1rem;
   background-color: dodgerblue;
   border-radius: 10px;
+  /* color: black; */
+  color: white;
+  font-size: 1rem;
+  border: none;
+}
+.btn-secondnary {
+  padding: 0.5rem 1rem;
+  background-color: hwb(51 7% 25%);
+  border-radius: 10px;
+  color: black;
+  font-size: 1rem;
+  border: none;
 }
 a {
   text-decoration: none;
@@ -103,7 +151,6 @@ a {
 .hero-image {
   max-width: 100%;
 }
-
 /* respond website */
 @media screen and (max-width: 768px) {
   .nav-list {
@@ -125,4 +172,51 @@ a {
     display: block;
     cursor: pointer;
   }
+}
+/* start popular-course */
+
+/* @media screen and (max-width: 768px) {
+.grid-1x3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+} */
+.pupolar-courses h1 {
+  /* background-color: blueviolet; */
+  color: white;
+  margin: auto;
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.item-card {
+  max-width: 500px;
+  text-align: center;
+  /* margin: 1rem 0; */
+  background-color: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+}
+.image-card {
+  max-width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.item-card h3 {
+  font-size: 1.2rem;
+}
+.item-card p {
+  font-size: 0.8rem;
+  margin: 1rem 0;
+}
+.group-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.btn-meta {
+  position: relative;
+  bottom: -35px;
 }
