@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+}
+html {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* width-contenner */
+.width-contenner {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.top-page {
+  background-color: gray;
+  padding: 0.5rem;
+}
+.icon {
+  color: white;
+  font-size: 1.2rem;
+  display: none;
+}
+
+.navigation {
+  /* background-color: yellow; */
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.nav-list {
+  list-style: none;
+  flex-direction: row;
+  display: flex;
+  gap: 2rem;
+}
+.nav-link > a {
+  text-decoration: none;
+  color: white;
+}
+.nav-link > a:hover {
+  color: hwb(210 50% 9% / 0.973);
+}
+li {
+  font-size: 1rem;
+  color: white;
+}
+.logo {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.nav-list .nav-link i {
+  padding: 0 5px;
+}
+/* .grid-1x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+
+} */
+.hero-sections {
+  margin: 20px 0;
+}
+.grid-1x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-letf h1 {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.grid-letf p {
+  position: relative;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+.btn {
+  padding: 0.5rem 1.5rem;
+  background-color: dodgerblue;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+}
+.nav-link a {
+  text-decoration: none;
+  color: white;
+}
+
+.grid-right {
+  max-width: 600px;
+}
+.hero-image {
+  max-width: 100%;
+}
+
+/* respond website */
+@media screen and (max-width: 768px) {
+  .nav-list {
+    /* display: none; */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 30px;
+    gap: 1rem;
+    transition: all 0.3s ease-in;
+  }
+  .nav-link {
+    border-bottom: 1px solid #f5f5f50c;
+    /* margin-bottom: 1px; */
+  }
+  .nav-list.show {
+    display: none;
+  }
+  .icon {
+    display: block;
+    cursor: pointer;
+  }
+}
