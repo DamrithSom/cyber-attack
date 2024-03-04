@@ -117,7 +117,7 @@ li {
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 }
 .grid-letf h1 {
@@ -216,6 +216,10 @@ a {
 .image-card {
   max-width: 100%;
   border-radius: 15px 15px 0 0;
+  transition: transform 0.2s;
+}
+.image-card:hover {
+  transform: scale(1.05);
 }
 .item-card h3 {
   font-size: 1.2rem;
