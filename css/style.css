@@ -86,6 +86,11 @@ li {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 }
+.grid-1x4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}
 @media screen and (max-width: 900px) {
   .grid-1x3 {
     grid-template-columns: 1fr 1fr;
@@ -131,7 +136,7 @@ li {
 }
 .btn-secondnary {
   padding: 0.5rem 1rem;
-  background-color: hwb(51 7% 25%);
+  background-color: hwb(51 13% 17%);
   border-radius: 10px;
   color: black;
   font-size: 1rem;
@@ -181,14 +186,16 @@ a {
   grid-template-columns: 1fr;
   gap: 2rem;
 } */
-.pupolar-courses h1 {
-  /* background-color: blueviolet; */
+
+/*  with and color header  */
+.all-header-title {
   color: white;
   margin: auto;
   padding: 2rem 0;
   font-size: 1.5rem;
   text-align: center;
 }
+
 .item-card {
   max-width: 500px;
   text-align: center;
@@ -219,4 +226,36 @@ a {
 .btn-meta {
   position: relative;
   bottom: -35px;
+}
+.services .grid-1x4 {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: 250px;
+  background-color: aqua;
+}
+.item-categories {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 5.5rem;
+  background-color: white;
+  border-radius: 15px;
+  width: 150px;
+  box-shadow: 0 0 1px black;
+}
+.item-in {
+  align-items: center;
+  justify-content: center;
+}
+.item-in img {
+  width: 100px;
+  transition: transform 0.2s;
+}
+.item-in img:hover {
+  transform: scale(1.05);
+}
+.title-article {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
 }
