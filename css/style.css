@@ -108,9 +108,16 @@ li {
   }
   .grid-1x3 {
     display: grid;
+    /* align-items: center;
+    justify-items: center; */
+    grid-template-columns: 1fr;
+  }
+  .grid-1x4 {
+    display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
   }
 }
 .grid-letf h1 {
@@ -194,6 +201,7 @@ a {
   padding: 2rem 0;
   font-size: 1.5rem;
   text-align: center;
+  text-decoration: underline;
 }
 
 .item-card {
@@ -227,12 +235,12 @@ a {
   position: relative;
   bottom: -35px;
 }
-.services .grid-1x4 {
+/* .services .grid-1x4 {
   margin-top: 2rem;
   max-width: 100%;
   height: 250px;
   background-color: aqua;
-}
+} */
 .item-categories {
   display: flex;
   flex-direction: column;
@@ -258,4 +266,19 @@ a {
   text-align: center;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.footer {
+  margin-top: 4.5rem;
+  padding: 3.5rem 0;
+  background-color: rgb(4, 19, 49);
+}
+.footer-lists .footer-links > a {
+  color: white;
+}
+.footer-lists .footer-links > a:hover {
+  color: hwb(210 50% 9% / 0.973);
+}
+.footer-lists {
+  list-style: none;
 }
